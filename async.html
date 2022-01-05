@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async task</title>
+</head>
+<body>
+    <h1>async task</h1>
+    <script>
+        console.log("hello")
+        /*
+          1. order pizza -2s
+          2.order is transfered to chef -1s
+          3.ingredent are cut- 5s
+          4.ingredent are bake -6s
+          5.cheese is added- 2s
+          6.pizza is ready -2s
+          7.pizza is eaten -8s
+        */
+        setTimeout(one,2000);
+        function one(){
+            console.log("order pizza")
+            setTimeout(two,1000)
+        }
+        // 2nd fun
+        function two(){
+            console.log("order is transfered to chef")
+            setTimeout(three,5000)
+        }
+        // 3rd 
+        function three(){
+            console.log("ingredent are cut")
+            setTimeout(four,6000)
+        }
+        // 4th
+        function four(){
+            console.log("ingredent are bake")
+            setTimeout(five,2000)
+        }
+        // 5th
+        function five(){
+            console.log("cheese is added-")
+            setTimeout(six,2000)
+        }
+        //6th
+        function six(){
+            console.log("pizza is ready")
+            setTimeout(seven,8000)
+        }
+        // 7th
+        function seven(){
+            console.log("pizza is eaten")
+        }
+
+    </script>
+</body>
+</html>
